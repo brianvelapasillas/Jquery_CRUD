@@ -9,10 +9,15 @@ $(document).ready(function(){
         url:'list_supplier.php',
         type:'GET',
         success: function(response){
-          console.log(response);
+          //console.log(response);
           let respuesta=JSON.parse(response);  
     
           let template='';
+
+          respuesta.forEach(resp => {
+            console.log(resp);
+            
+        });
     
         } // success
     });  //end ajax

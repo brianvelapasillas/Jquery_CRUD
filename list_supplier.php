@@ -1,13 +1,14 @@
 <?php
- 
-    include('conexion.php');
+    header('Access-Control-Allow-Origin: *');
 
-    $sql = "select * from  vendedores";
+    include('conn.php');
+
+    $sql = "select * from suppliers";
     
     $resultado=mysqli_query($conn,$sql);
 
     if (!$resultado){
-        die('Error en la consulta'.mysqli_error($conn));
+        die('Error in the consultation'.mysqli_error($conn));
     }
    
 
