@@ -23,7 +23,6 @@ $(document).ready(function(){
     });  //end ajax
 
 
-
 }); //end program
 
 
