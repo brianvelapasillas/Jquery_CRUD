@@ -22,8 +22,6 @@ $(document).ready(function(){
         } // success
     });  //end ajax
 
-
-    
 }); //end program
 
 
