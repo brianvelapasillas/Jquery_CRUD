@@ -35,6 +35,11 @@ $(document).ready(function(){
     });  //end ajax
   }
 
+  //delete supplier
+  $(document).on('click', '.borra-prov',function(){
+    if(confirm('are you sure you want to delete de supplier?')){} // fin confirm
+  });
+
 }); //end program
 
 
