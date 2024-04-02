@@ -38,6 +38,21 @@ $(document).ready(function(){
   //delete supplier
   $(document).on('click', '.borra-prov',function(){
     if(confirm('are you sure you want to delete de supplier?')){} // fin confirm
+
+    let elemento=$(this)[0].parentElement.parentElement;
+    console.log(elemento);
+
+    let id=$(elemento).attr('id_prov');
+    console.log(id);
+
+    //shows the element where you are
+    console.log($(this));
+
+    $.post('delete-supplier.php',{id},function(response){
+      console.log(response);
+      readSupp();   // llama a función leer tareas
+    });
+
   });
 
 }); //end program
