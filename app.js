@@ -5,6 +5,9 @@ console.log("I'm in Javascript from the console");
 $(document).ready(function(){
     console.log("I'm in Jquery");
 
+    readSupp();
+
+  function readSupp(){
     $.ajax({
         url:'list_supplier.php',
         type:'GET',
@@ -15,12 +18,22 @@ $(document).ready(function(){
           let template='';
 
           respuesta.forEach(resp => {
-            console.log(resp);
-            
+            //console.log(resp);
+            template+=` <tr id_prov="${resp.id}"> 
+                            <td> ${resp.id} </td>
+                            <td> <a href="#" class="nom-item">${resp.nombre} </a></td>
+                            <td> ${resp.ap} </td>
+                            <td> ${resp.am} </td>
+                            <td> <button class="borra-prov btn btn-danger"> Eliminar </button> </td>
+                            
+                        </tr>`
+                //console.log(template);
         });
+        $('#tableID').html(template);
     
         } // success
     });  //end ajax
+  }
 
 }); //end program
 
