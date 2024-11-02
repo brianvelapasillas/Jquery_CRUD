@@ -56,5 +56,3 @@ $(document).ready(function(){
   });
 
 }); //end programs
-
-
